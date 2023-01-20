@@ -1,5 +1,7 @@
 import "./globals.css";
 
+import Header from "./Header";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -9,10 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       */}
       <head />
       <body className="flex flex-col min-h-screen">
-        <header className="flex justify-center">
-          Header
-          <nav>Nav</nav>
-        </header>
+        <Header />
         <main className="flex flex-1 flex-col justify-between items-center">{children}</main>
         <footer className="flex justify-center">Footer</footer>
       </body>
