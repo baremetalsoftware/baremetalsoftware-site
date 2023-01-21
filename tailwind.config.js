@@ -32,7 +32,11 @@ module.exports = {
         900: "#393e41",
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        "full-white": "#ffffff",
+      },
+    },
   },
   plugins: [],
 };

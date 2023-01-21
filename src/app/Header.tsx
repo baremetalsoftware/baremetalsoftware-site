@@ -1,35 +1,40 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 import { useCallback, useState } from "react";
 
-import useSiteUrl from "../useSiteUrl";
-
 function useHeader() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
-  const siteUrl = useSiteUrl();
 
   const onMenuClick = useCallback(() => setMenuOpen(!menuOpen), [menuOpen]);
 
   return {
-    siteUrl,
     menuOpen,
     onMenuClick,
   };
 }
 
 export default function Header() {
-  const { siteUrl, menuOpen, onMenuClick } = useHeader();
+  const { menuOpen, onMenuClick } = useHeader();
   const menuTransition = `transition-all ease-in-out ${menuOpen ? "duration-500" : "duration-250"}`;
   const barClasses = `absolute left-1/4 w-1/2 h-0.5 ${menuTransition}`;
   const pageItemClasses = "m-3";
   const pageLinkClasses = "p-2 hover:text-blue-100";
 
   return (
-    <header className="flex justify-between">
-      <Link href={siteUrl}>Bare Metal Software</Link>
+    <header className="flex justify-between items-center p-4 bg-full-white drop-shadow">
+      <Link role="link" href="/" aria-label="Company Logo Link">
+        <Image
+          role="img"
+          src={menuOpen ? "company-logo-white.svg" : "company-logo.svg"}
+          alt="Bare Metal Software"
+          width={240}
+          height={100}
+          className="relative z-10"
+        />
+      </Link>
       <nav
         role="navigation"
         className={`w-full h-screen lg:w-auto lg:h-auto absolute top-0 left-0 lg:relative bg-slate-900 lg:bg-transparent ${menuTransition} ${
@@ -37,8 +42,8 @@ export default function Header() {
         }`}
       >
         <ul
-          className={`flex flex-col lg:flex-row items-center h-full ${menuTransition} ${
-            menuOpen === true ? "py-16 text-white" : "text-transparent lg:text-black"
+          className={`flex flex-col lg:flex-row items-center h-full lg:mt-0 ${menuTransition} ${
+            menuOpen === true ? "py-24 text-white" : "text-transparent lg:text-black"
           }`}
         >
           <li className={pageItemClasses}>
