@@ -1,3 +1,6 @@
+const primaryColor = "#008db9";
+const secondaryColor = "#a44a3f";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/app/**/*.{js,ts,jsx,tsx}"],
@@ -8,18 +11,18 @@ module.exports = {
       black: "#090a0b",
       white: "#fdfdff",
       blue: {
-        DEFAULT: "#008db9",
+        DEFAULT: primaryColor,
         100: "#0ac6ff",
         200: "#00bcf5",
         300: "#00ace0",
         400: "#009ccc",
-        500: "#008db9",
+        500: primaryColor,
         600: "#007da3",
         700: "#006d8f",
         800: "#005e7a",
         900: "#004e66",
       },
-      orange: "#a44a3f",
+      orange: secondaryColor,
       gray: {
         100: "#d7d8d9",
         200: "#c4c5c6",
@@ -34,6 +37,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        primary: primaryColor,
         "full-white": "#ffffff",
       },
     },
