@@ -30,8 +30,8 @@ export default function Header() {
           role="img"
           src={menuOpen ? "company-logo-white.svg" : "company-logo.svg"}
           alt="Bare Metal Software"
-          width={240}
-          height={100}
+          width={241}
+          height={40}
           className="relative z-10"
         />
       </Link>
