@@ -21,7 +21,7 @@ export default function Header() {
   const menuTransition = `transition-all ease-in-out ${menuOpen ? "duration-500" : "duration-250"}`;
   const barClasses = `absolute left-1/4 w-1/2 h-0.5 ${menuTransition}`;
   const pageItemClasses = "m-3";
-  const pageLinkClasses = "p-2 hover:text-blue-100";
+  const pageLinkClasses = "p-2 hover:text-blue-100 lg:hover:text-blue";
 
   return (
     <header className="flex justify-between items-center p-4 bg-full-white drop-shadow">
