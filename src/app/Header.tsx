@@ -57,7 +57,7 @@ export default function Header() {
             </Link>
           </li>
           <li className={pageItemClasses}>
-            <Link className={pageLinkClasses} href="">
+            <Link className={pageLinkClasses} href="/contact-us">
               Contact us
             </Link>
           </li>
