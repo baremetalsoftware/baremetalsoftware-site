@@ -48,9 +48,10 @@ export default function Home() {
         <SectionContent>
           <SectionHeader>What do we do?</SectionHeader>
           <SectionText>
-            We help you deliver high quality software by working close with you on your projects and
-            improve your team skills. From delivering features to coaching your team on best
-            practices, we make sure that our work has a lasting impact in your company.
+            We help you deliver high quality software by partnering with you on your projects and
+            holistically improve your team skills. From delivering features to coaching your team on
+            best practices, we make sure that our work has a lasting and intrinsic impact in your
+            company.
           </SectionText>
         </SectionContent>
         <SectionImage>
@@ -65,9 +66,8 @@ export default function Home() {
           <SectionHeader>What is our expertise?</SectionHeader>
           <SectionText>
             We specialise in Web Development in JavaScript. We build responsive websites with
-            state-of-the-art technology to delight users with an excellent user experience. Our main
-            expertise is in front-end development with React and TypeScript, although we can deliver
-            full-stack solutions.
+            state-of-the-art technology to enhance user experience. Our main focus is in front-end
+            development with React and TypeScript, although we can deliver full-stack solutions.
           </SectionText>
         </SectionContent>
       </Section>
@@ -76,9 +76,10 @@ export default function Home() {
           <SectionHeader>How do we do this?</SectionHeader>
           <SectionText>
             XP (Extreme Programming) practices are in our DNA. We embrace Test-Driven Development,
-            Pair Programming, and Continuous Delivery as the pilars of delivering robust software
-            steadily. We help you adopt these techniques to improve your ways of working, so your
-            teams can thrive for the years to come after our work is complete.
+            Pair Programming, and Continuous Delivery as the pillars of steadily delivering robust
+            software. We help you adopt these techniques to improve your ways of working, so your
+            teams can thrive for the years to come after our work is complete. Minimal efforts for
+            maximum results.
           </SectionText>
         </SectionContent>
         <SectionImage>
@@ -92,9 +93,9 @@ export default function Home() {
         <SectionContent>
           <SectionHeader>What is our motivation?</SectionHeader>
           <SectionText>
-            We love technology. Programming is our profession, as well as our hobby. Our culture of
-            learning is contagious and we love spreading the joy when working with your teams. The
-            work done is always better when there is genuine care and passion behind it.
+            We love technology. Programming is our profession, as well as our passion. Our culture
+            of learning is contagious, and we love spreading the joy when working with your teams.
+            The work done is always better when there is genuine care and passion behind it.
           </SectionText>
         </SectionContent>
       </Section>
