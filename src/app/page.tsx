@@ -60,7 +60,7 @@ export default function Home() {
       </Section>
       <Section>
         <SectionImage>
-          <EngineeringIcon title="Expertise icon" className="fill-secondary" />
+          <EngineeringIcon title="Engineering icon" className="fill-secondary" />
         </SectionImage>
         <SectionContent>
           <SectionHeader>What is our expertise?</SectionHeader>
@@ -83,12 +83,12 @@ export default function Home() {
           </SectionText>
         </SectionContent>
         <SectionImage>
-          <ConstructionIcon title="Expertise icon" className="fill-secondary" />
+          <ConstructionIcon title="Construction icon" className="fill-secondary" />
         </SectionImage>
       </Section>
       <Section>
         <SectionImage>
-          <InsightsIcon title="Expertise icon" className="fill-secondary" />
+          <InsightsIcon title="Insights icon" className="fill-secondary" />
         </SectionImage>
         <SectionContent>
           <SectionHeader>What is our motivation?</SectionHeader>
