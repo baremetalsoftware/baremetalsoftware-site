@@ -8,7 +8,7 @@ type FooterLinkProps = {
 
 function FooterLink({ href, text }: FooterLinkProps) {
   return (
-    <Link className="text-primary" href={href}>
+    <Link className="text-primary" href={href} target="_blank">
       {text}
     </Link>
   );
