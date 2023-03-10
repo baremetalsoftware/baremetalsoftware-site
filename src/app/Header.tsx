@@ -10,14 +10,21 @@ function useHeader() {
 
   const onMenuClick = useCallback(() => setMenuOpen(!menuOpen), [menuOpen]);
 
+  const onMenuItemClick = useCallback(() => {
+    if (menuOpen) {
+      onMenuClick();
+    }
+  }, [menuOpen, onMenuClick]);
+
   return {
     menuOpen,
     onMenuClick,
+    onMenuItemClick,
   };
 }
 
 export default function Header() {
-  const { menuOpen, onMenuClick } = useHeader();
+  const { menuOpen, onMenuClick, onMenuItemClick } = useHeader();
   const menuTransition = `transition-all ease-in-out ${menuOpen ? "duration-500" : "duration-250"}`;
   const barClasses = `absolute left-1/4 w-1/2 h-0.5 ${menuTransition}`;
   const pageItemClasses = "m-3";
@@ -46,18 +53,18 @@ export default function Header() {
             menuOpen === true ? "py-24 text-white" : "text-transparent lg:text-black"
           }`}
         >
-          <li className={pageItemClasses}>
+          <li role="menuitem" className={pageItemClasses} onClick={onMenuItemClick}>
             <Link className={pageLinkClasses} href="/services">
               Services
             </Link>
           </li>
-          <li className={pageItemClasses}>
+          <li role="menuitem" className={pageItemClasses} onClick={onMenuItemClick}>
             <Link className={pageLinkClasses} href="/about-us">
               About us
             </Link>
           </li>
-          <li className={pageItemClasses}>
-            <Link className={pageLinkClasses} href="/contact-us">
+          <li role="menuitem" className={pageItemClasses}>
+            <Link className={pageLinkClasses} href="/contact-us" onClick={onMenuItemClick}>
               Contact us
             </Link>
           </li>

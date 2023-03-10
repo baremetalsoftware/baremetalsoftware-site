@@ -24,12 +24,16 @@ describe("Header", () => {
     expect(screen.getByRole("menu")).toHaveClass("lg:invisible");
   });
 
-  test("opens navigation list when clicking on the menu button", async () => {
+  test("opens and closes navigation list when clicking on the menu button", async () => {
     render(<Header />);
 
     await userEvent.click(screen.getByRole("menu"));
 
     expect(screen.getByRole("navigation")).toHaveClass("visible");
+
+    await userEvent.click(screen.getByRole("menu"));
+
+    expect(screen.getByRole("navigation")).not.toHaveClass("visible");
   });
 
   test("changes the logo to white when clicking on the menu button", async () => {
@@ -41,5 +45,14 @@ describe("Header", () => {
       "src",
       "company-logo-white.svg"
     );
+  });
+
+  test("closes navigation list when clicking on a menu item", async () => {
+    render(<Header />);
+
+    await userEvent.click(screen.getByRole("menu"));
+    await userEvent.click(screen.getAllByRole("menuitem")[0]);
+
+    expect(screen.getByRole("navigation")).not.toHaveClass("visible");
   });
 });
