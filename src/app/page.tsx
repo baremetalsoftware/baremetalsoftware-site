@@ -1,4 +1,3 @@
-import { Inter } from "@next/font/google";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -6,8 +5,6 @@ import ConstructionIcon from "./ConstructionIcon";
 import EngineeringIcon from "./EngineeringIcon";
 import InsightsIcon from "./InsightsIcon";
 import LaptopIcon from "./LaptopIcon";
-
-const inter = Inter({ subsets: ["latin"] });
 
 function Section({ children }: { children: ReactNode }) {
   return <div className="flex items-center mt-8 md:mt-12 lg:mt-16">{children}</div>;
