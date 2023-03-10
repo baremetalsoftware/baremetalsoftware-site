@@ -20,7 +20,7 @@ export default function Services() {
   return (
     <div className="max-w-5xl p-4 md:p-6 lg:p-8 bg-white text-black">
       <h1 className="mt-2 md:mt-3 lg:mt-4 text-center text-2xl md:text-3xl lg:text-4xl font-bold">
-        Helping clients deliver outstanding software that improves people's lives with modern
+        Helping clients deliver outstanding software that improves people&#39;s lives with modern
         technology
       </h1>
       <Section>
