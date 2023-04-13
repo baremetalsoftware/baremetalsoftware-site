@@ -1,5 +1,6 @@
-const primaryColor = "#008db9";
-const secondaryColor = "#a44a3f";
+const primaryColor = "#f15822";
+const secondaryColor = "#f99f1c";
+const tertiaryColor = "#616e7d";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,31 +9,24 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      black: "#090a0b",
-      white: "#fdfdff",
-      blue: {
+      black: "#090a0c",
+      white: "#f3f5f6",
+      orange: {
         DEFAULT: primaryColor,
-        100: "#0ac6ff",
-        200: "#00bcf5",
-        300: "#00ace0",
-        400: "#009ccc",
+        100: "#f58c66",
         500: primaryColor,
-        600: "#007da3",
-        700: "#006d8f",
-        800: "#005e7a",
-        900: "#004e66",
       },
-      orange: secondaryColor,
+      yellow: secondaryColor,
       gray: {
-        100: "#d7d8d9",
-        200: "#c4c5c6",
-        300: "#b0b2b3",
-        400: "#9c9fa0",
-        500: "#888b8d",
-        600: "#74787a",
-        700: "#616567",
-        800: "#4d5154",
-        900: "#393e41",
+        100: "#dce0e4",
+        200: "#c5ccd3",
+        300: "#bac1ca",
+        400: "#97a2af",
+        500: "#8c98a6",
+        600: "#758495",
+        700: tertiaryColor,
+        800: "#47515c",
+        900: "#3e4751",
       },
     },
     extend: {

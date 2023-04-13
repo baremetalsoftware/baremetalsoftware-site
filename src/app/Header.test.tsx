@@ -7,15 +7,13 @@ describe("Header", () => {
   test("renders company link", () => {
     render(<Header />);
 
-    const companyLogoLink = screen.getByLabelText("Company Logo Link");
-    expect(companyLogoLink).toHaveAttribute("href", "/");
-    expect(within(companyLogoLink).getByRole("img")).toHaveAttribute("src", "company-logo.svg");
+    expect(screen.getByLabelText("Bare Metal Software Limited")).toHaveAttribute("href", "/");
   });
 
   test("hides navigation on mobile and shows it on desktop by default", () => {
     render(<Header />);
 
-    expect(screen.getByRole("navigation")).toHaveClass("max-lg:invisible");
+    expect(screen.getByRole("navigation")).toHaveClass("max-lg:hidden");
   });
 
   test("hides menu button on desktop", () => {
@@ -34,17 +32,6 @@ describe("Header", () => {
     await userEvent.click(screen.getByRole("menu"));
 
     expect(screen.getByRole("navigation")).not.toHaveClass("visible");
-  });
-
-  test("changes the logo to white when clicking on the menu button", async () => {
-    render(<Header />);
-
-    await userEvent.click(screen.getByRole("menu"));
-
-    expect(within(screen.getByLabelText("Company Logo Link")).getByRole("img")).toHaveAttribute(
-      "src",
-      "company-logo-white.svg"
-    );
   });
 
   test("closes navigation list when clicking on a menu item", async () => {
